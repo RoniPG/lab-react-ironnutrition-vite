@@ -32,7 +32,9 @@ function FoodList() {
             <h1 className="mb-5">LAB | React IronNutrition</h1>
             <AddFoodForm handleAddFood={handleAddFood} />
             <Search search={search} handleSearch={handleSearch} />
-            {foodBoxes}
+            {foods.length <=0 
+            ? <h3>Oops! There is no more content to show</h3> 
+            : foodBoxes}
         </>
     );
 }
